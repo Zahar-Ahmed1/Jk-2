@@ -1,0 +1,112 @@
+footer {
+  background: #000;
+  color: #fff;
+  font-family: 'Alumni Sans', 'Orbitron', sans-serif;
+  border-top: 2px solid var(--primary-color);
+  padding-top: 2rem;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .footer-social {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  .footer-btn {
+    border: 1.5px solid #e91e63;
+    color: #e91e63;
+    background: transparent;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 0.2rem;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    &:hover {
+      background: #e91e63;
+      color: #fff;
+      transform: scale(1.12);
+    }
+  }
+  .footer-text {
+    color: #bdbdbd;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    h5 {
+      font-family: 'Orbitron', sans-serif;
+      color: #e91e63;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    ul {
+      padding-left: 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      li {
+        margin-bottom: 0;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.05rem;
+          transition: color 0.2s;
+          &:hover {
+            color: #e91e63;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+    background: rgba(0,0,0,0.08);
+    padding: 1rem 0 0.5rem 0;
+    text-align: center;
+    margin-top: 1rem;
+    a.footer-brand {
+      color: #e91e63;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer .container {
+    padding: 0 0.5rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    h5 {
+      margin-bottom: 0.7rem;
+    }
+    ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+}

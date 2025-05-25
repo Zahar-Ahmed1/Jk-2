@@ -7,11 +7,11 @@ import { HomeS3Component } from '../home-s3/home-s3.component';
 import { HomeS4Component } from '../home-s4/home-s4.component';
 import { HomeS5Component } from '../home-s5/home-s5.component';
 import { HomeS6Component } from '../home-s6/home-s6.component';
-
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, HomeS1Component, HomeS2Component, HomeS3Component, HomeS4Component, HomeS5Component, HomeS6Component],
+  imports: [CommonModule, FooterComponent, NavbarComponent, HomeS1Component, HomeS2Component, HomeS3Component, HomeS4Component, HomeS5Component, HomeS6Component],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

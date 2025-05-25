@@ -1,0 +1,35 @@
+<section class="solution-s2-section" id="solution-s2-section">
+  <div class="solution-s2-bg-overlay"></div>
+  <div class="solution-s2-background"></div>
+  <div class="container solution-s2-container">
+    <div class="solution-s2-content">
+      <div class="solution-s2-visual">
+        <!-- Visuel 3D animé (placeholder SVG/CSS) -->
+        <svg width="320" height="200" viewBox="0 0 320 200">
+          <g>
+            <ellipse cx="160" cy="170" rx="120" ry="18" fill="#0056b3" opacity="0.18">
+              <animate attributeName="rx" values="120;140;120" dur="3s" repeatCount="indefinite"/>
+            </ellipse>
+            <rect x="80" y="60" width="160" height="80" rx="18" fill="#222" stroke="#0056b3" stroke-width="4"/>
+            <rect x="100" y="80" width="120" height="12" rx="6" fill="#E91E63">
+              <animate attributeName="width" values="120;80;120" dur="2s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="100" y="100" width="90" height="12" rx="6" fill="#0056b3">
+              <animate attributeName="width" values="90;130;90" dur="2.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="100" y="120" width="60" height="12" rx="6" fill="#E91E63">
+              <animate attributeName="width" values="60;100;60" dur="2s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </svg>
+      </div>
+      <div class="solution-s2-text-block">
+        <h2 class="solution-s2-title left-line-title">Nous nous intégrons à votre écosystème</h2>
+        <p class="solution-s2-text">
+            Nous nous assurons que votre site s'intègre parfaitement à vos outils et systèmes existants, garantissant ainsi une gestion fluide et cohérente de vos données. Que ce soit avec vos logiciels internes ou vos plateformes de gestion, nous créons une solution qui facilite votre travail quotidien et optimise votre efficacité.
+        </p>
+      </div>
+    </div>
+    <app-scroll-down-indicator (click)="scrollToSolutionS1()"></app-scroll-down-indicator>
+  </div>
+</section> 

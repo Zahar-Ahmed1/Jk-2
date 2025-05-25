@@ -1,0 +1,22 @@
+<section class="home-s6-section" id="home-s6-section">
+  <div class="section-bg-overlay"></div>
+  <div class="home-s6-background-lines"></div>
+  <div class="container home-s6-container">
+    <div class="home-s6-left">
+      <h2 class="ordibee-font home-s6-title">
+        UN SITE WEB PERFORMANT<br>POUR PROPULSER<br>VOTRE ENTREPRISE
+      </h2>
+    </div>
+    <div class="home-s6-right">
+      <div class="home-s6-cards">
+        <div class="home-s6-card" *ngFor="let card of cards; let i = index">
+          <div class="home-s6-icon" [innerHTML]="card.icon"></div>
+          <h3 class="home-s6-card-title">{{ card.title }}</h3>
+          <p class="home-s6-card-text">{{ card.text }}</p>
+          <div class="home-s6-underline"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-scroll-down-indicator (click)="scrollToSection()"></app-scroll-down-indicator>
+</section>

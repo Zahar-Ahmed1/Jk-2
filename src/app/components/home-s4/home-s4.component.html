@@ -1,0 +1,29 @@
+<section class="home-s4-section" id="home-s4-section">
+  <div class="section-bg-overlay"></div>
+  <div class="container home-s4-container">
+    <h2 class="ordibee-font home-s4-title left-line-title">MES RÉALISATIONS</h2>
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let site of sites">
+        <div class="card-image">
+          <img [src]="site.img" [alt]="site.title" />
+          <div class="card-overlay">
+            <div class="tech-stack">
+              <span *ngFor="let tech of site.technologies" class="tech-tag">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">{{ site.title }}</h3>
+          <p class="card-description">{{ site.description }}</p>
+          <ul class="card-features">
+            <li *ngFor="let feature of site.features">{{ feature }}</li>
+          </ul>
+          <a class="btn-primary card-link" [href]="site.link" target="_blank" rel="noopener">Voir le projet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-s4-background-lines"></div>
+  <app-scroll-down-indicator (click)="scrollToSection()"></app-scroll-down-indicator>
+</section>
+

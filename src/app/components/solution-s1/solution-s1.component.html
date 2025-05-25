@@ -1,0 +1,21 @@
+<section class="solution-s1-section" id="solution-s1-section">
+  <div class="solution-s1-bg-overlay"></div>
+  <div class="container solution-s1-container">
+    <h1 class="solution-s1-title ordibee-font left-line-title">
+      PLONGEZ DANS LA NOUVELLE ÈRE<br>DES SITES PERFORMANTS
+    </h1>
+    <div class="solution-s1-cards">
+      <div class="solution-s1-card" *ngFor="let card of cards">
+        <div class="solution-s1-card-icon-block">
+          <span class="solution-s1-card-icon" [innerHTML]="card.icon"></span>
+          <span class="solution-s1-card-separator"></span>
+        </div>
+        <div class="solution-s1-content">
+          <h3 class="solution-s1-card-title solution-s1-card-title-blue">{{ card.title }}</h3>
+          <p class="solution-s1-card-text">{{ card.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-scroll-down-indicator (click)="scrollToSolutionS2()"></app-scroll-down-indicator>
+</section> 

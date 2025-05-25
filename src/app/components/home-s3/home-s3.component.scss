@@ -1,0 +1,113 @@
+.home-s3-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('https://res.cloudinary.com/du1rqxwmr/image/upload/fpxwxk5ghntja0e2lmvz.jpg') center center/cover no-repeat, transparent;
+  background-attachment: fixed;
+  overflow: hidden;
+  animation: bgZoomMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoomMove {
+  0% {
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+  100% {
+    background-size: 115% 115%;
+    background-position: 60% 40%;
+  }
+}
+
+.home-s3-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.left-line-title {
+  padding-left: 0.6rem;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.home-s3-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.home-s3-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+.home-s3-number {
+  font-size: 3.2rem;
+  color: var(--primary-color);
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.home-s3-label {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .home-s3-section {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 100vh;
+  }
+  .home-s3-stats {
+    gap: 30px;
+  }
+  .home-s3-title {
+    font-size: 2.1rem;
+  }
+  .home-s3-number {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-s3-stats {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .home-s3-title {
+    font-size: 1.3rem;
+  }
+  .home-s3-number {
+    font-size: 1.3rem;
+  }
+}
+
+.section-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0.18;
+  transition: opacity 0.6s cubic-bezier(.4,2,.3,1);
+  pointer-events: none;
+  z-index: 0;
+}

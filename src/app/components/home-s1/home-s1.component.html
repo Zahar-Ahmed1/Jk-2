@@ -1,0 +1,21 @@
+<section class="hero-section" id="home-s1-section">
+  <div class="hero-bg-overlay"></div>
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="ordibee-font main-title" [@slideInFromLeft]>
+          UN SITE WEB UNIQUE POUR<br>
+          VOTRE ENTREPRISE
+        </h1>
+        <p class="subtitle" [@slideInFromRight]>
+          METTEZ EN AVANT VOTRE ACTIVITÉ AVEC UN SITE MODERNE,<br>
+          PERFORMANT ET CONÇU POUR ATTIRER VOS CLIENTS.
+        </p>
+        <button class="btn-primary" [@fadeInUp] (click)="scrollToSection()">en savoir plus</button>
+      </div>
+    </div>
+    <div class="scroll-down-indicator" (click)="scrollToSection()">
+      <span></span>
+    </div>
+  </section>
+</section>

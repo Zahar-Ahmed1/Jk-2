@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;600&display=swap');
+
+/* Global Styles */
+:root {
+  --primary-color: #E91E63;
+  --secondary-color: #0056b3;
+  --text-color: #ffffff;
+  --background-color: #0a0a0a;
+  --card-background: rgba(255, 255, 255, 0.1);
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alumni Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Common Section Styles */
+.section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  color: var(--text-color);
+  line-height: 1.2;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.background-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    120deg,
+    transparent,
+    transparent 10px,
+    var(--primary-color) 12px,
+    transparent 14px
+  );
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+  animation: moveLines 18s linear infinite;
+}
+
+@keyframes moveLines {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 100px; }
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  &:hover::before {
+    transform: translateX(100%);
+  }
+}
+
+/* Cards */
+.card {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(233, 30, 99, 0.3);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  padding: 12px 32px;
+  border-radius: 0 0 0 16px;
+  font-family: 'Orbitron', sans-serif;
+  background: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+  transition: all 0.3s cubic-bezier(.4,2,.3,1);
+  border: none;
+  cursor: pointer;
+  text-transform: lowercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: #0056b3;
+  color: #fff;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 86, 179, 0.3);
+}
+
+.navbar {
+  display: flex !important;
+  background: #111 !important;
+  color: #fff !important;
+  z-index: 1000 !important;
+  position: fixed !important;
+  width: 100vw !important;
+  top: 0;
+  left: 0;
+}

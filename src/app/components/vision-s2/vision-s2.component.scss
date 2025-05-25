@@ -272,4 +272,26 @@
 }
 .social-icons a:hover {
   transform: scale(1.15);
+}
+
+.founder-icons {
+  margin-left: 0.7rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  vertical-align: middle;
+
+  a {
+    color: #e91e63;
+    font-size: 1.25rem;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: #0056b3;
+      transform: scale(1.18) rotate(-6deg);
+    }
+    &:first-child {
+      color: #0056b3;
+    }
+  }
 } 

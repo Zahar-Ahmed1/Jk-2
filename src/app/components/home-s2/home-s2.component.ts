@@ -4,6 +4,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollDownIndicatorComponent } from '../../shared/scroll-down-indicator.component';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-s2',
@@ -41,9 +42,10 @@ import { ScrollDownIndicatorComponent } from '../../shared/scroll-down-indicator
   ]
 })
 export class HomeS2Component implements OnInit, AfterViewInit {
-  constructor(private renderer: Renderer2, private el: ElementRef) {
+  constructor(private renderer: Renderer2,private router:Router,private el: ElementRef) {
     gsap.registerPlugin(ScrollTrigger);
   }
+
 
   ngOnInit(): void {
     // Animation GSAP pour les lignes de fond
@@ -70,6 +72,7 @@ export class HomeS2Component implements OnInit, AfterViewInit {
         });
       });
     }
+
   }
 
   ngAfterViewInit(): void {
@@ -109,4 +112,11 @@ export class HomeS2Component implements OnInit, AfterViewInit {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  navigateTo(section: string) {
+    this.router.navigate([section])
+  }
+
+
+
 }

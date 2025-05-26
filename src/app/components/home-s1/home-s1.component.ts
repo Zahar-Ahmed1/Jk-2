@@ -9,6 +9,7 @@ import { HomeS4Component } from '../home-s4/home-s4.component';
 import { HomeS5Component } from '../home-s5/home-s5.component';
 import { HomeS6Component } from '../home-s6/home-s6.component';
 import { NavbarComponent } from '../navbar/navbar.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-s1',
@@ -64,7 +65,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   ]
 })
 export class HomeS1Component implements OnInit, AfterViewInit {
-  constructor(private renderer: Renderer2, private el: ElementRef) {
+  constructor(private renderer: Renderer2,private router:Router, private el: ElementRef) {
     gsap.registerPlugin(ScrollTrigger);
   }
 
@@ -87,7 +88,7 @@ export class HomeS1Component implements OnInit, AfterViewInit {
         span.textContent = char;
         span.style.opacity = '0';
         title.appendChild(span);
-        
+
         gsap.to(span, {
           opacity: 1,
           duration: 0.1,
@@ -135,5 +136,9 @@ export class HomeS1Component implements OnInit, AfterViewInit {
     // progress = 0 (overlay opaque), progress = 1 (overlay transparent)
     const opacity = 1 - progress;
     this.renderer.setStyle(overlay, 'opacity', opacity.toString());
+  }
+
+  navigateTo(section: string) {
+    this.router.navigate([section])
   }
 }

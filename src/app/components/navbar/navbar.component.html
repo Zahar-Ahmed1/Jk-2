@@ -1,5 +1,5 @@
 <nav class="main-navbar">
-  <img src="https://res.cloudinary.com/du1rqxwmr/image/upload/v1/luai6bfvueqt9iosmcku" alt="Logo" class="navbar-logo" />
+  <img (click)="navigateTo('home')" src="https://res.cloudinary.com/du1rqxwmr/image/upload/v1/luai6bfvueqt9iosmcku" alt="Logo" class="navbar-logo" />
   <div class="burger-menu" (click)="toggleMenu()">
     <span></span>
     <span></span>
@@ -11,5 +11,5 @@
     <a routerLink="/vision" routerLinkActive="active">VISION</a>
     <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
   </div>
-  <button class="btn-primary letsgo-btn" routerLink="/">LET'S GO</button>
-</nav> 
+  <button (click)="navigateTo('contact')" class="btn-primary letsgo-btn" >LET'S GO</button>
+</nav>

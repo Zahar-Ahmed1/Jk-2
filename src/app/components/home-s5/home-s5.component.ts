@@ -1,11 +1,10 @@
 import { Component, Renderer2, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollDownIndicatorComponent } from '../../shared/scroll-down-indicator.component';
-
 @Component({
   selector: 'app-home-s5',
   standalone: true,
-  imports: [CommonModule, ScrollDownIndicatorComponent],
+  imports: [CommonModule, ScrollDownIndicatorComponent, ],
   templateUrl: './home-s5.component.html',
   styleUrl: './home-s5.component.scss'
 })

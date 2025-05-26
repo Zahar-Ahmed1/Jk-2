@@ -14,24 +14,24 @@ export class HomeS4Component implements OnInit {
     {
       title: 'E-commerce Platform',
       description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des stocks',
-      technologies: ['Angular', 'Node.js', 'MongoDB'],
-      img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+      technologies: ['Angular', 'Spring boot', 'MySQl'],
+      img: 'https://res.cloudinary.com/dxtlsrtoq/image/upload/v12345678/byd3kejrde5pkv1axbfn.png',
       link: 'https://votre-site.com',
       features: ['Interface responsive', 'Système de paiement sécurisé', 'Gestion des stocks en temps réel']
     },
     {
       title: 'Application de Gestion',
       description: 'Système de gestion des tâches et des projets pour entreprises',
-      technologies: ['React', 'Express', 'PostgreSQL'],
+      technologies: ['Angular', 'Spring', 'PostgreSQL'],
       img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
       link: 'https://votre-site.com',
       features: ['Tableau de bord interactif', 'Gestion des équipes', 'Rapports automatisés']
     },
     {
       title: 'Site Vitrine',
-      description: 'Site vitrine moderne pour une entreprise de services',
-      technologies: ['Vue.js', 'Tailwind CSS', 'Firebase'],
-      img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80',
+      description: 'Site vitrine moderne pour une entreprise des produits médicaux',
+      technologies: ['React', 'Tailwind CSS', 'Firebase'],
+      img: 'https://res.cloudinary.com/dxtlsrtoq/image/upload/v12345678/ouetvpdezehbugsaz7ng.png',
       link: 'https://votre-site.com',
       features: ['Design moderne', 'Animations fluides', 'SEO optimisé']
     }

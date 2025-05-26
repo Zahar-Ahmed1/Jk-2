@@ -9,10 +9,10 @@
     <p class="vision-s1-text">
       Chez <span class="rose">JOINKOM</span>, notre mission est de concevoir des solutions digitales sur mesure, adaptées aux exigences spécifiques de chaque entreprise. Nous allions une expertise de pointe dans la création de sites web personnalisés, une analyse précise des données backend, et une gestion optimisée des réseaux sociaux pour offrir des résultats tangibles. Nous accompagnons nos clients dans leur transformation numérique en fournissant des services qui maximisent leur visibilité, optimisent leurs processus internes et renforcent leur présence en ligne de manière stratégique et durable.
     </p>
-    <button class="btn-primary">en savoir plus</button>
+    <button (click)="navigateTo('solution')" class="btn-primary">en savoir plus</button>
     <div class="scroll-down-indicator" (click)="scrollToVisionS2()">
       <span></span>
     </div>
   </div>
   <app-scroll-down-indicator (click)="scrollToVisionS2()"></app-scroll-down-indicator>
-</section> 
+</section>

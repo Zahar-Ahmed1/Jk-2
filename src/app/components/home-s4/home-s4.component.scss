@@ -4,22 +4,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('https://res.cloudinary.com/du1rqxwmr/image/upload/kvomwewqbbirvv1jk48j.jpg') center center/cover no-repeat, transparent;
-  background-attachment: fixed;
   overflow: hidden;
-  animation: bgZoomMove 18s ease-in-out infinite alternate;
   padding: 4rem 0;
-}
-
-@keyframes bgZoomMove {
-  0% {
-    background-size: 100% 100%;
-    background-position: center center;
-  }
-  100% {
-    background-size: 115% 115%;
-    background-position: 60% 40%;
-  }
 }
 
 .home-s4-container {
@@ -297,7 +283,7 @@
 
 .card-title {
   font-size: 1.5rem;
-  color: white;
+  color: #0056b3;
   margin: 0;
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

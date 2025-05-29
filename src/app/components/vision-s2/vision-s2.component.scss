@@ -8,6 +8,7 @@
   animation: bgZoomMove 18s ease-in-out infinite alternate;
   display: flex;
   align-items: center;
+  
 }
 
 @keyframes bgZoomMove {
@@ -277,7 +278,6 @@
 }
 
 .founder-icons {
-
   margin-left: 0.7rem;
   display: inline-flex;
   gap: 0.5rem;

@@ -28,9 +28,9 @@ export class HomeS4Component implements OnInit {
       features: ['Tableau de bord interactif', 'Gestion des équipes', 'Rapports automatisés']
     },
     {
-      title: 'Site Vitrine',
+      title: 'Boutique Médicaux & Santé',
       description: 'Site vitrine moderne pour une entreprise des produits médicaux',
-      technologies: ['React', 'Tailwind CSS', 'Firebase'],
+      technologies: ['Angular', 'Node.js', 'Firebase'],
       img: 'https://res.cloudinary.com/dxtlsrtoq/image/upload/v12345678/ouetvpdezehbugsaz7ng.png',
       link: 'https://votre-site.com',
       features: ['Design moderne', 'Animations fluides', 'SEO optimisé']

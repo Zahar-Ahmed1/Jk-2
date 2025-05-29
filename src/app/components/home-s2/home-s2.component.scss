@@ -4,9 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('https://res.cloudinary.com/du1rqxwmr/image/upload/qnr8hxyrmtlbvas4wb4c.jpg') center center/cover no-repeat, transparent;
   overflow: hidden;
-  animation: bgZoomMove 18s ease-in-out infinite alternate;
 }
 
 .home-s2-container {
@@ -78,8 +76,6 @@
 
 @media (max-width: 900px) {
   .home-s2-section {
-    background-size: cover !important;
-    background-position: center center !important;
     min-height: 100vh;
   }
 }
@@ -92,15 +88,4 @@
   transition: opacity 0.6s cubic-bezier(.4,2,.3,1);
   pointer-events: none;
   z-index: 0;
-}
-
-@keyframes bgZoomMove {
-  0% {
-    background-size: 100% 100%;
-    background-position: center center;
-  }
-  100% {
-    background-size: 115% 115%;
-    background-position: 60% 40%;
-  }
 }

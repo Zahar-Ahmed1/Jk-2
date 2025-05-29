@@ -1,1 +1,28 @@
- 
+.home-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('https://res.cloudinary.com/du1rqxwmr/image/upload/kvomwewqbbirvv1jk48j.jpg') center center/cover no-repeat, transparent;
+  background-attachment: fixed;
+  overflow: hidden;
+  animation: bgZoomMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoomMove {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 110% 110%;
+  }
+}
+
+// Suppression des backgrounds des sections
+:host ::ng-deep {
+  app-home-s1, app-home-s2, app-home-s3, app-home-s4, app-home-s5, app-home-s6 {
+    background: none !important;
+  }
+}
